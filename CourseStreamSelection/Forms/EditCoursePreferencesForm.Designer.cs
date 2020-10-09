@@ -28,14 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewGroup listViewGroup1 = new System.Windows.Forms.ListViewGroup("Semester 6", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup2 = new System.Windows.Forms.ListViewGroup("Semester 7", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup3 = new System.Windows.Forms.ListViewGroup("Semester 8", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewGroup listViewGroup4 = new System.Windows.Forms.ListViewGroup("Semester 6", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup5 = new System.Windows.Forms.ListViewGroup("Semester 7", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup6 = new System.Windows.Forms.ListViewGroup("Semester 8", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem(new string[] {
             "NNA-07-02",
             "Μοντελοποίηση και Προσομοίωση Υπολογιστικών Συστημάτων",
             "99999"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem(new string[] {
             "Θρασύβουλος-Κωνσταντίνος Τσιάτσος",
             "-69"}, -1);
             this.coursesListView = new System.Windows.Forms.ListView();
@@ -45,7 +45,7 @@
             this.coursesGroupBox = new System.Windows.Forms.GroupBox();
             this.setCourseRatingButton = new System.Windows.Forms.Button();
             this.resetSelectedCourseRatingsButton = new System.Windows.Forms.Button();
-            this.ratingLabel = new System.Windows.Forms.Label();
+            this.courseRatingLabel = new System.Windows.Forms.Label();
             this.courseRatingTextBox = new System.Windows.Forms.TextBox();
             this.professorsGroupBox = new System.Windows.Forms.GroupBox();
             this.setProfessorRatingButton = new System.Windows.Forms.Button();
@@ -53,11 +53,12 @@
             this.professorsListView = new System.Windows.Forms.ListView();
             this.professorNameHeader = new System.Windows.Forms.ColumnHeader();
             this.professorRatingHeader = new System.Windows.Forms.ColumnHeader();
-            this.label1 = new System.Windows.Forms.Label();
+            this.professorRatingLabel = new System.Windows.Forms.Label();
             this.professorRatingTextBox = new System.Windows.Forms.TextBox();
             this.columnHeader1 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader2 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader3 = new System.Windows.Forms.ColumnHeader();
+            this.noticeLabel = new System.Windows.Forms.Label();
             this.coursesGroupBox.SuspendLayout();
             this.professorsGroupBox.SuspendLayout();
             this.SuspendLayout();
@@ -71,21 +72,21 @@
             this.titleHeader,
             this.ratingHeader});
             this.coursesListView.FullRowSelect = true;
-            listViewGroup1.Header = "Semester 6";
-            listViewGroup1.Name = "semester6";
-            listViewGroup2.Header = "Semester 7";
-            listViewGroup2.Name = "semester7";
-            listViewGroup3.Header = "Semester 8";
-            listViewGroup3.Name = "semester8";
+            listViewGroup4.Header = "Semester 6";
+            listViewGroup4.Name = "semester6";
+            listViewGroup5.Header = "Semester 7";
+            listViewGroup5.Name = "semester7";
+            listViewGroup6.Header = "Semester 8";
+            listViewGroup6.Name = "semester8";
             this.coursesListView.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
-            listViewGroup1,
-            listViewGroup2,
-            listViewGroup3});
+            listViewGroup4,
+            listViewGroup5,
+            listViewGroup6});
             this.coursesListView.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
             this.coursesListView.HideSelection = false;
-            listViewItem1.StateImageIndex = 0;
+            listViewItem3.StateImageIndex = 0;
             this.coursesListView.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem1});
+            listViewItem3});
             this.coursesListView.LabelWrap = false;
             this.coursesListView.Location = new System.Drawing.Point(6, 22);
             this.coursesListView.Name = "coursesListView";
@@ -115,7 +116,7 @@
             // 
             this.coursesGroupBox.Controls.Add(this.setCourseRatingButton);
             this.coursesGroupBox.Controls.Add(this.resetSelectedCourseRatingsButton);
-            this.coursesGroupBox.Controls.Add(this.ratingLabel);
+            this.coursesGroupBox.Controls.Add(this.courseRatingLabel);
             this.coursesGroupBox.Controls.Add(this.courseRatingTextBox);
             this.coursesGroupBox.Controls.Add(this.coursesListView);
             this.coursesGroupBox.Location = new System.Drawing.Point(12, 12);
@@ -152,15 +153,15 @@
             this.resetSelectedCourseRatingsButton.UseVisualStyleBackColor = true;
             this.resetSelectedCourseRatingsButton.Click += new System.EventHandler(this.ResetSelectedCourseRatingsRequested);
             // 
-            // ratingLabel
+            // courseRatingLabel
             // 
-            this.ratingLabel.AutoSize = true;
-            this.ratingLabel.BackColor = System.Drawing.Color.Transparent;
-            this.ratingLabel.Location = new System.Drawing.Point(403, 303);
-            this.ratingLabel.Name = "ratingLabel";
-            this.ratingLabel.Size = new System.Drawing.Size(41, 15);
-            this.ratingLabel.TabIndex = 2;
-            this.ratingLabel.Text = "Rating";
+            this.courseRatingLabel.AutoSize = true;
+            this.courseRatingLabel.BackColor = System.Drawing.Color.Transparent;
+            this.courseRatingLabel.Location = new System.Drawing.Point(403, 303);
+            this.courseRatingLabel.Name = "courseRatingLabel";
+            this.courseRatingLabel.Size = new System.Drawing.Size(41, 15);
+            this.courseRatingLabel.TabIndex = 2;
+            this.courseRatingLabel.Text = "Rating";
             // 
             // courseRatingTextBox
             // 
@@ -180,7 +181,7 @@
             this.professorsGroupBox.Controls.Add(this.setProfessorRatingButton);
             this.professorsGroupBox.Controls.Add(this.resetSelectedProfessorRatingsButton);
             this.professorsGroupBox.Controls.Add(this.professorsListView);
-            this.professorsGroupBox.Controls.Add(this.label1);
+            this.professorsGroupBox.Controls.Add(this.professorRatingLabel);
             this.professorsGroupBox.Controls.Add(this.professorRatingTextBox);
             this.professorsGroupBox.Location = new System.Drawing.Point(562, 12);
             this.professorsGroupBox.Name = "professorsGroupBox";
@@ -226,9 +227,9 @@
             this.professorsListView.FullRowSelect = true;
             this.professorsListView.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
             this.professorsListView.HideSelection = false;
-            listViewItem2.StateImageIndex = 0;
+            listViewItem4.StateImageIndex = 0;
             this.professorsListView.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem2});
+            listViewItem4});
             this.professorsListView.LabelWrap = false;
             this.professorsListView.Location = new System.Drawing.Point(6, 22);
             this.professorsListView.Name = "professorsListView";
@@ -249,14 +250,14 @@
             this.professorRatingHeader.Text = "Rating";
             this.professorRatingHeader.Width = 50;
             // 
-            // label1
+            // professorRatingLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(192, 303);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(41, 15);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Rating";
+            this.professorRatingLabel.AutoSize = true;
+            this.professorRatingLabel.Location = new System.Drawing.Point(192, 303);
+            this.professorRatingLabel.Name = "professorRatingLabel";
+            this.professorRatingLabel.Size = new System.Drawing.Size(41, 15);
+            this.professorRatingLabel.TabIndex = 2;
+            this.professorRatingLabel.Text = "Rating";
             // 
             // professorRatingTextBox
             // 
@@ -285,11 +286,22 @@
             this.columnHeader3.Text = "Rating";
             this.columnHeader3.Width = 50;
             // 
+            // noticeLabel
+            // 
+            this.noticeLabel.AutoSize = true;
+            this.noticeLabel.Location = new System.Drawing.Point(9, 347);
+            this.noticeLabel.Name = "noticeLabel";
+            this.noticeLabel.Size = new System.Drawing.Size(805, 15);
+            this.noticeLabel.TabIndex = 3;
+            this.noticeLabel.Text = "NOTE: The rating range is automatically linearly normalized to [0, 1] during calc" +
+    "ulations. You may use any rating value range, as long as you rate linearly.";
+            // 
             // EditCoursePreferencesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(907, 353);
+            this.ClientSize = new System.Drawing.Size(907, 371);
+            this.Controls.Add(this.noticeLabel);
             this.Controls.Add(this.professorsGroupBox);
             this.Controls.Add(this.coursesGroupBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
@@ -301,6 +313,7 @@
             this.professorsGroupBox.ResumeLayout(false);
             this.professorsGroupBox.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -319,12 +332,13 @@
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.Button resetSelectedCourseRatingsButton;
-        private System.Windows.Forms.Label ratingLabel;
+        private System.Windows.Forms.Label courseRatingLabel;
         private System.Windows.Forms.TextBox courseRatingTextBox;
         private System.Windows.Forms.Button resetSelectedProfessorRatingsButton;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label professorRatingLabel;
         private System.Windows.Forms.TextBox professorRatingTextBox;
         private System.Windows.Forms.Button setCourseRatingButton;
         private System.Windows.Forms.Button setProfessorRatingButton;
+        private System.Windows.Forms.Label noticeLabel;
     }
 }
