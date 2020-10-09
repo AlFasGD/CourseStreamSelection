@@ -1,14 +1,13 @@
 ﻿namespace CourseStreamSelection.Model
 {
-    public class CourseRating
+    public class CourseRating : ObjectRating
     {
         public Course Course { get; }
-        public double Rating { get; set; }
 
         public CourseRating(Course course, double rating = 0)
+            : base(rating)
         {
             Course = course;
-            Rating = rating;
         }
     }
 }

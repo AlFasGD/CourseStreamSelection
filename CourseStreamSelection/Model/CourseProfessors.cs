@@ -5,7 +5,8 @@
         public string Professor1 { get; }
         public string Professor2 { get; }
 
-        public bool HasProfessors => Professor1 != null || Professor2 != null;
+        // By the object's constuction, it is assured that Professor1 will determine the existence of a professor
+        public bool HasProfessors => Professor1 != null;
 
         public CourseProfessors() : this(null, null) { }
         public CourseProfessors(string professor1) : this(professor1, null) { }
@@ -27,7 +28,7 @@
 
         public override string ToString()
         {
-            if (Professor1 == null)
+            if (!HasProfessors)
                 return "-";
             if (Professor2 == null)
                 return Professor1;

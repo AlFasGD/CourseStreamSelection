@@ -27,8 +27,8 @@ namespace CourseStreamSelection.Model
 
         public CoursesInformation(List<Course> c, Dictionary<string, string> streams)
         {
-            InitializeArray(mandatoryCoursesByStreams);
-            InitializeArray(optionalCoursesByStreams);
+            mandatoryCoursesByStreams.InitializeArrayElements();
+            optionalCoursesByStreams.InitializeArrayElements();
 
             courses = c;
             courseStreams = streams;
@@ -60,12 +60,6 @@ namespace CourseStreamSelection.Model
 
             professors.Remove(null);
             professors.Remove("-");
-        }
-
-        private static void InitializeArray<T>(List<T>[] ar)
-        {
-            for (int i = 0; i < ar.Length; i++)
-                ar[i] = new List<T>();
         }
     }
 }

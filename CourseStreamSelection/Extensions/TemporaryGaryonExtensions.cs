@@ -114,5 +114,12 @@ namespace CourseStreamSelection.Extensions
         {
             return d.ToDictionary(kvp => kvp.Key, kvp => (TNonNullable?)kvp.Value);
         }
+
+        public static void InitializeArrayElements<T>(this T[] ar)
+            where T : new()
+        {
+            for (int i = 0; i < ar.Length; i++)
+                ar[i] = new T();
+        }
     }
 }
