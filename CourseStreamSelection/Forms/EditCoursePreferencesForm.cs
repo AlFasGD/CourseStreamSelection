@@ -2,6 +2,7 @@
 using CourseStreamSelection.Model;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Windows.Forms;
 
 namespace CourseStreamSelection.Forms
@@ -145,17 +146,24 @@ namespace CourseStreamSelection.Forms
 
         private void SetCourseRatingRequested(object sender, EventArgs e)
         {
-            if (!double.TryParse(courseRatingTextBox.Text, out double rating))
+            if (!TryParseDouble(courseRatingTextBox.Text, out double rating))
                 return;
 
             SetCurrentlySelectedCourseRatings(rating);
         }
         private void SetProfessorRatingRequested(object sender, EventArgs e)
         {
-            if (!double.TryParse(professorRatingTextBox.Text, out double rating))
+            if (!TryParseDouble(professorRatingTextBox.Text, out double rating))
                 return;
 
             SetCurrentlySelectedProfessorRatings(rating);
+        }
+
+        private static bool TryParseDouble(string text, out double value)
+        {
+            if (double.TryParse(text, NumberStyles.Float, CultureInfo.InvariantCulture, out value))
+                return true;
+            return double.TryParse(text, NumberStyles.Float, CultureInfo.CurrentCulture, out value);
         }
         #endregion
 
