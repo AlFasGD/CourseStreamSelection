@@ -28,14 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewGroup listViewGroup4 = new System.Windows.Forms.ListViewGroup("Semester 6", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup5 = new System.Windows.Forms.ListViewGroup("Semester 7", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup6 = new System.Windows.Forms.ListViewGroup("Semester 8", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewGroup listViewGroup1 = new System.Windows.Forms.ListViewGroup("Semester 6", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup2 = new System.Windows.Forms.ListViewGroup("Semester 7", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup3 = new System.Windows.Forms.ListViewGroup("Semester 8", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new string[] {
             "NNA-07-02",
             "Μοντελοποίηση και Προσομοίωση Υπολογιστικών Συστημάτων",
             "99999"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem(new string[] {
             "Θρασύβουλος-Κωνσταντίνος Τσιάτσος",
             "-69"}, -1);
             this.coursesListView = new System.Windows.Forms.ListView();
@@ -72,21 +72,21 @@
             this.titleHeader,
             this.ratingHeader});
             this.coursesListView.FullRowSelect = true;
-            listViewGroup4.Header = "Semester 6";
-            listViewGroup4.Name = "semester6";
-            listViewGroup5.Header = "Semester 7";
-            listViewGroup5.Name = "semester7";
-            listViewGroup6.Header = "Semester 8";
-            listViewGroup6.Name = "semester8";
+            listViewGroup1.Header = "Semester 6";
+            listViewGroup1.Name = "semester6";
+            listViewGroup2.Header = "Semester 7";
+            listViewGroup2.Name = "semester7";
+            listViewGroup3.Header = "Semester 8";
+            listViewGroup3.Name = "semester8";
             this.coursesListView.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
-            listViewGroup4,
-            listViewGroup5,
-            listViewGroup6});
+            listViewGroup1,
+            listViewGroup2,
+            listViewGroup3});
             this.coursesListView.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
             this.coursesListView.HideSelection = false;
-            listViewItem3.StateImageIndex = 0;
+            listViewItem1.StateImageIndex = 0;
             this.coursesListView.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem3});
+            listViewItem1});
             this.coursesListView.LabelWrap = false;
             this.coursesListView.Location = new System.Drawing.Point(6, 22);
             this.coursesListView.Name = "coursesListView";
@@ -227,9 +227,9 @@
             this.professorsListView.FullRowSelect = true;
             this.professorsListView.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
             this.professorsListView.HideSelection = false;
-            listViewItem4.StateImageIndex = 0;
+            listViewItem2.StateImageIndex = 0;
             this.professorsListView.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem4});
+            listViewItem2});
             this.professorsListView.LabelWrap = false;
             this.professorsListView.Location = new System.Drawing.Point(6, 22);
             this.professorsListView.Name = "professorsListView";

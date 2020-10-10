@@ -32,6 +32,8 @@ namespace CourseStreamSelection.Forms
         public EditCoursePreferencesForm(Profile p)
         {
             InitializeComponent();
+            AddSelectAllEvents();
+
             SwitchProfile(p);
         }
 
@@ -39,6 +41,12 @@ namespace CourseStreamSelection.Forms
         {
             profile = newProfile;
             LoadCurrentProfile();
+        }
+
+        private void AddSelectAllEvents()
+        {
+            AddSelectAllEventsToComponents(coursesGroupBox, HandleSelectAllCourses);
+            AddSelectAllEventsToComponents(professorsGroupBox, HandleSelectAllProfessors);
         }
 
         #region Loading
@@ -71,6 +79,35 @@ namespace CourseStreamSelection.Forms
             }
         }
         #endregion
+
+        private void HandleSelectAllCourses(object sender, KeyEventArgs e)
+        {
+            if (IsValidSelectAll(e))
+                SelectAllElements(coursesListView);
+        }
+        private void HandleSelectAllProfessors(object sender, KeyEventArgs e)
+        {
+            if (IsValidSelectAll(e))
+                SelectAllElements(professorsListView);
+        }
+
+        private static bool IsValidSelectAll(KeyEventArgs e)
+        {
+            return ModifierKeys == Keys.Control && e.KeyCode == Keys.A;
+        }
+        private static void SelectAllElements(ListView listView)
+        {
+            foreach (ListViewItem item in listView.Items)
+                item.Selected = true;
+        }
+        private static void AddSelectAllEventsToComponents(Control control, KeyEventHandler handler)
+        {
+            foreach (Control c in control.Controls)
+            {
+                c.KeyDown += handler;
+                AddSelectAllEventsToComponents(c, handler);
+            }
+        }
 
         #region Event Handling
         #region Form
